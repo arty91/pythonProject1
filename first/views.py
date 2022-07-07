@@ -26,6 +26,11 @@ class SecondView(APIView):
 		print(query_params)
 		return Response(query_params)
 
+	def post(self, *args, **kwargs):
+		data = self.request.data
+		print(data)
+		return Response(data)
+
 
 class ThirdView(APIView):
 	def get(self, *args, **kwargs):
