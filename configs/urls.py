@@ -16,10 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from first.views import FirstView, SecondView, ThirdView
+from users.views import UserCreateListView, UserRetrieveUpdateDestroyView
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    path('first', FirstView.as_view()),
-    path('second', SecondView.as_view()),
-    path('third/<str:name>/<int:age>', ThirdView.as_view())
+    # path('first', FirstView.as_view()),
+    # path('second', SecondView.as_view()),
+    # path('third/<str:name>/<int:age>', ThirdView.as_view())
+    path('users', UserCreateListView.as_view()),
+    path('users/<int:pk>', UserRetrieveUpdateDestroyView.as_view())
 ]
