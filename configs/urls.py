@@ -15,10 +15,9 @@ Including another URLconf
 """
 from django.urls import path, include
 from django.contrib import admin
-
-from apps.cars.views import CarListCreateView, CarUpdateretrieveDestroyView
+from apps.computers.views import ComputerListCreateView, ComputerUpdateretrieveDestroyView
 
 urlpatterns = [
-	path('admin/', admin.site.urls),
-	path('cars/', include('apps.cars.urls'))
+	# path('admin/', admin.site.urls),
+	path('computers', include('apps.computers.urls'))
 ]
